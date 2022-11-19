@@ -1,0 +1,2 @@
+# Proyecto_Git_Kiosko
+AHORA SI MIERDA TERMINEMO LA WEA

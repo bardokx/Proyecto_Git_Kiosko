@@ -1,0 +1,25 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<h1>Catálogo Virtual</h1>
+
+{% for p in Productos %}
+
+<article>
+    <h2>{{Productos.tienda_id}}{{Productos.precio}}</h2>
+    <button>
+        🛒 Agregar
+    </button>
+    <button>
+        🗑 Eliminar
+    </button>
+</article>
+
+{% endfor %} 
+
+<button>
+    Unirse a la fila
+</button>
+
+{% endblock %}

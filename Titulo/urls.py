@@ -7,4 +7,5 @@ urlpatterns = [
     path("virtual_row/", views.waiting_row),
     path("terms_and_conditions/", views.terms),
     path("payment/", views.pay),
+    path("tienda/", views.catalogo),
 ]

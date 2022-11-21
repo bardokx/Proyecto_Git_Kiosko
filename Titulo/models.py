@@ -3,6 +3,8 @@ from django.db import models
 # Create your models here.
 class Tiendas(models.Model):
     name = models.CharField(max_length=200)
+    def __str__(self):
+        return self.name
 
 class Productos(models.Model):
     name = models.CharField(max_length=200)
@@ -15,3 +17,5 @@ class Usuarios(models.Model):
     rol = models.PositiveIntegerField()
     correo = models.CharField(max_length=200)
     telefono = models.PositiveIntegerField()
+    def __str__(self):
+        return self.nombre

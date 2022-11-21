@@ -17,13 +17,13 @@
 </article>
 {% endfor %}
 
-<form action="/payment">
+<form action="{% url 'payment' %}">
     <button>
         🤑 Pagar
     </button>
 </form> 
 
-<form action="/virtual_row/">
+<form action="{% url 'row' %}">
     <button>
         Unirse a la fila
     </button>

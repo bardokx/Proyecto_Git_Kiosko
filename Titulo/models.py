@@ -14,8 +14,7 @@ class Productos(models.Model):
 
 class Usuarios(models.Model):
     nombre = models.CharField(max_length=200)
-    rol = models.PositiveIntegerField()
     correo = models.CharField(max_length=200)
-    telefono = models.PositiveIntegerField()
+    n_fila = models.PositiveIntegerField()
     def __str__(self):
         return self.nombre

@@ -19,3 +19,6 @@ def terms(request):
 
 def pay(request):
     return render(request, "pay.html")
+
+def admin_tienda(request):
+    return render(request, "admin_tienda.html")

@@ -32,3 +32,21 @@ body {
     padding: 10px;
     margin-bottom: 2px;
 }
+
+.prod {
+    background-color: rgb(200, 197, 197);
+    color: black;
+    padding: 1px 15px;
+}
+
+.title {
+    color: black;
+    display:flex;
+    justify-content: center;
+}
+
+#arreglar
+.sapce_p button {
+    display: flex;
+    justify-content:space-between;
+}

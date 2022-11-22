@@ -2,19 +2,22 @@
 
 {% block content %}
 
-<h1>Catálogo Virtual</h1>
+<h1 class="title">
+    Catálogo Virtual
+</h1>
 
 {% for p in productos %}
 
-<article>
-    <h2>{{p.name}}{{p.precio}}</h2>
-    <button>
-        🛒 Agregar
-    </button>
-    <button>
-        🗑 Eliminar
-    </button>
-</article>
+<div class="prod">
+    <h2 class="sapce_p" >${{p.precio}} {{p.name}}
+        <button>
+            🛒 Agregar
+        </button>
+        <button>
+            🗑 Eliminar
+        </button>
+    </h2>
+</div>
 {% endfor %}
 
 <form action="{% url 'payment' %}">

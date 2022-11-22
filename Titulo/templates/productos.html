@@ -4,10 +4,10 @@
 
 <h1>Catálogo Virtual</h1>
 
-{% for p in Productos %}
+{% for p in productos %}
 
 <article>
-    <h2>{{Productos.tienda_id}}{{Productos.precio}}</h2>
+    <h2>{{p.name}}{{p.precio}}</h2>
     <button>
         🛒 Agregar
     </button>

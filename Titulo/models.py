@@ -11,6 +11,9 @@ class Productos(models.Model):
     tiempo = models.PositiveIntegerField()
     precio = models.PositiveIntegerField()
     tienda = models.ForeignKey(Tiendas, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.name
+
 
 class Usuarios(models.Model):
     nombre = models.CharField(max_length=200)

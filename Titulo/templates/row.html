@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-
 {% extends "layouts/base.html" %}
 
 {% block content %}
 
-<html lang="es">
-    <head>
-        <body>
-            Aca va la fila virtual
-        </body>
-    </head>
-</html>
+<h1>Tu numero en la fila:</h1>
 
+{% for p in usuario %}
+
+<article>
+    <h2>{{p.nombre}}</h2>
+    <h2>{{p.n_fila}}</h2>
+{% endfor %}
 {% endblock %}

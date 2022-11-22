@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse
-from .models import Tiendas, Productos
+from .models import Tiendas, Productos, Usuarios
 # Create your views here.
 
 def start_session(request):
@@ -16,7 +16,10 @@ def catalogo(request):
     })
 
 def waiting_row(request):
-    return render(request, "row.html")
+    usuario = Usuarios.objects.all()
+    return render(request, "row.html", {
+        'usuario': usuario
+    })
 
 def terms(request):
     return render(request, "terms_conditions.html")

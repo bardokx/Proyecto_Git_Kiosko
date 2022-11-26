@@ -9,14 +9,15 @@
 {% for p in productos %}
 
 <div class="prod">
-    <h2 class="sapce_p" >${{p.precio}} {{p.name}}
+    <h2 class="space_p" >${{p.precio}} {{p.name}}</h2>
+    <div class="caja">
         <button>
             🛒 Agregar
         </button>
         <button>
             🗑 Eliminar
         </button>
-    </h2>
+    </div>
 </div>
 {% endfor %}
 

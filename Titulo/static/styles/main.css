@@ -36,16 +36,22 @@ body {
 .prod {
     background-color: rgb(200, 197, 197);
     color: black;
-    padding: 1px 15px;
+    display: flex;
+    flex-direction: row;
 }
-
+.caja {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
 .title {
     color: black;
     display:flex;
     justify-content: center;
 }
 
-.sapce_p button {
-    display: flex;
+.space_p {
+    justify-content: right;
     justify-content:space-between;
+    display: flex;
 }

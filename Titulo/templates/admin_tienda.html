@@ -1,7 +1,27 @@
-<html lang="es">
-    <head>
-        <body>
-            Aca va la vista de la tienda
-        </body>
-    </head>
-</html>
+{% extends "layouts/baseHome.html" %}
+
+{% block content %}
+
+<h1>Usuarios en fila</h1>
+
+{% for usuario in usuarios %}
+
+<div>
+    <h1>{{usuario.nombre}}</h1>
+    <p>Numero en la fila: {{usuario.n_fila}}</p>
+
+    {% if usuario.estado_pedido == False %}
+    <p>Pedido pendiente</p>
+    <button>
+        ✅Pedido Listo
+    </button>
+    {% else %}
+    <p>Pedido realizado</p>
+    {% endif %}
+
+
+
+</div>
+
+{% endfor %}
+{% endblock %}

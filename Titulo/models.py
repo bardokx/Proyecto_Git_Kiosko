@@ -19,5 +19,6 @@ class Usuarios(models.Model):
     nombre = models.CharField(max_length=200)
     correo = models.CharField(max_length=200)
     n_fila = models.PositiveIntegerField()
+    estado_pedido = models.BooleanField(default=False)
     def __str__(self):
         return self.nombre

@@ -7,7 +7,10 @@ def start_session(request):
     return render(request, 'login.html')
 
 def homepage(request):
-    return render(request, 'home.html')
+    tiendas = Tiendas.objects.all()
+    return render(request, 'home.html', {
+        'tiendas': tiendas
+    })
 
 def catalogo(request):
     productos = Productos.objects.all()
@@ -51,7 +54,4 @@ def pay(request):
     return render(request, "pay.html")
 
 def admin_tienda(request):
-    tiendas = Tiendas.objects.all()
-    return render(request, "admin_tienda.html", {
-        'tiendas': tiendas
-    })
+    return render(request)

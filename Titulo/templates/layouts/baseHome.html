@@ -20,20 +20,8 @@
         <a href="{% url 'terms' %}">Terminos y condiciones</a>
       </li>
     </ul>
-  </nav>
-  
-  <main class="container">
-    {% block content %}
-    {% endblock %}
-  </main>
-  <nav>
-  <ul>
-    <li>
-      <a class="card" 
-      href="{% url 'shop' %}">Aqui van las tiendas
-      </a>
-    </li>
-  </ul>
-  </nav>
+  </nav>  
 </body>
-</html>
+
+{% block content %}
+{% endblock %}

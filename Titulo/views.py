@@ -28,4 +28,7 @@ def pay(request):
     return render(request, "pay.html")
 
 def admin_tienda(request):
-    return render(request, "admin_tienda.html")
+    tiendas = Tiendas.objects.all()
+    return render(request, "admin_tienda.html", {
+        'tiendas': tiendas
+    })

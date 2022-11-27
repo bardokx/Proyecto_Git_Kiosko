@@ -9,7 +9,7 @@
 {% for p in productos %}
 
 <div class="prod">
-    <h2 class="space_p" >${{p.precio}} {{p.name}}</h2>
+    <h2 class="space_p" > {{p.precio}} {{p.name}} </h2>
     <div class="caja">
         <button>
             🛒 Agregar
@@ -19,6 +19,7 @@
         </button>
     </div>
 </div>
+
 {% endfor %}
 
 <form action="{% url 'payment' %}">

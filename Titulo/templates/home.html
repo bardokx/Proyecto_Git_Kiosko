@@ -1,12 +1,18 @@
 {% extends "layouts/baseHome.html" %}
 
-{% load static %}
-
 {% block content %}
-
+    
 <h2>
   🔎 Buscar
 </h2>
 
+{% for t in tiendas %}
+
+<div>
+  <h2 href="{% url 'shop' %}"> {{t.name}} </h2>
+</div>
+
+{% endfor %}
 {% endblock %}
+
 

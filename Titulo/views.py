@@ -15,6 +15,29 @@ def catalogo(request):
         'productos': productos
     })
 
+def agregar_producto(request, producto_id):
+    carrito = carrito(request)
+    producto = Productos.objects.get(id=producto_id)
+    carrito.agregar(producto)
+    return redirect('Titulo:tienda')
+
+def eliminar_producto(request, producto_id):
+    carrito = carrito(request)
+    producto = Productos.objects.get(id = producto_id)
+    carrito.eliminar(producto)
+    return redirect('Titulo:tienda')
+
+def restar_producto(request, producto_id):
+    carrito = carrito(request)
+    producto = Productos.objects.get(id = producto_id)
+    carrito.restar(producto)
+    return redirect('Titulo:tienda')
+
+def limpiar_carrito(request):
+    carrito = carrito(request)
+    carrito.limpiar()
+    return redirect('Titulo:tienda')
+
 def waiting_row(request):
     usuario = Usuarios.objects.all()
     return render(request, "row.html", {

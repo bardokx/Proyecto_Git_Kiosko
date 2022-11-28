@@ -54,4 +54,7 @@ def pay(request):
     return render(request, "pay.html")
 
 def admin_tienda(request):
-    return render(request)
+    usuarios = Usuarios.objects.all()
+    return render(request, 'admin_tienda.html', {
+        'usuarios': usuarios
+    })

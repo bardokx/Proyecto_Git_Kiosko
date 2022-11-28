@@ -2,14 +2,16 @@
 
 {% block content %}
     
-<h2>
+<h2 class="buscar">
   🔎 Buscar
 </h2>
 
 {% for t in tiendas %}
 
 <div>
-  <a href="{% url 'shop' %}"> {{t.name}} </a>
+  <a href="{% url 'shop' %}" class="tiendas"> 
+    {{t.name}}
+  </a>
 </div>
 
 {% endfor %}

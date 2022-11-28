@@ -10,29 +10,28 @@
 
 <div class="prod">
     <h2 class="space_p" > {{p.precio}} {{p.name}} </h2>
-    <div class="caja">
+    <form class="caja">
         <button>
             🛒 Agregar
         </button>
         <button>
             🗑 Eliminar
         </button>
-    </div>
+    </form>
 </div>
 
 {% endfor %}
 
-<form action="{% url 'payment' %}">
+<form action="{% url 'payment' %}" class="padding">
     <button>
-        🤑 Pagar
+        Pagar
     </button>
 </form> 
 
-<form action="{% url 'row' %}">
+<form action="{% url 'row' %}" class="padding">
     <button>
         Unirse a la fila
     </button>
 </form>
-
 
 {% endblock %}
